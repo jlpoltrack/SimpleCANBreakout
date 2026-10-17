@@ -423,35 +423,38 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Interface_CAN_LIN:TCAN332"
+		(symbol "Interface_CAN_LIN:SN65HVD230"
+			(pin_names
+				(offset 1.016)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "U"
-				(at -10.16 8.89 0)
+				(at -2.54 10.16 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
+					(justify right)
 				)
 			)
-			(property "Value" "TCAN332"
-				(at 2.54 8.89 0)
+			(property "Value" "SN65HVD230"
+				(at -2.54 7.62 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
+					(justify right)
 				)
 			)
-			(property "Footprint" ""
+			(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
 				(at 0 -12.7 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -459,11 +462,21 @@
 				(effects
 					(font
 						(size 1.27 1.27)
-						(italic yes)
 					)
 				)
 			)
-			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tcan337.pdf"
+			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/sn65hvd230.pdf"
+				(at -2.54 10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "CAN Bus Transceivers, 3.3V, 1Mbps, Low-Power capabilities, SOIC-8"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -474,7 +487,7 @@
 					)
 				)
 			)
-			(property "Description" "High-Speed CAN Transceiver, 1Mbps, 3.3V supply, SOT-23-8/SOIC-8"
+			(property "ki_keywords" "can transeiver ti low-power"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -485,7 +498,7 @@
 					)
 				)
 			)
-			(property "ki_keywords" "High-Speed CAN Transceiver"
+			(property "ki_fp_filters" "SOIC*3.9x4.9mm*P1.27mm*"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -496,21 +509,10 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "*TSOT?23* *SOIC*3.9x4.9mm*P1.27mm*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "TCAN332_0_1"
+			(symbol "SN65HVD230_0_1"
 				(rectangle
-					(start -10.16 7.62)
-					(end 10.16 -7.62)
+					(start -7.62 5.08)
+					(end 7.62 -7.62)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -520,11 +522,11 @@
 					)
 				)
 			)
-			(symbol "TCAN332_1_1"
+			(symbol "SN65HVD230_1_1"
 				(pin input line
-					(at -12.7 5.08 0)
+					(at -10.16 2.54 0)
 					(length 2.54)
-					(name "TXD"
+					(name "D"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -558,7 +560,7 @@
 					)
 				)
 				(pin power_in line
-					(at 0 10.16 270)
+					(at 0 7.62 270)
 					(length 2.54)
 					(name "VCC"
 						(effects
@@ -575,10 +577,10 @@
 						)
 					)
 				)
-				(pin tri_state line
-					(at -12.7 2.54 0)
+				(pin output line
+					(at -10.16 0 0)
 					(length 2.54)
-					(name "RXD"
+					(name "R"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -593,11 +595,10 @@
 						)
 					)
 				)
-				(pin no_connect line
+				(pin output line
 					(at -10.16 -2.54 0)
 					(length 2.54)
-					(hide yes)
-					(name "NC"
+					(name "Vref"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -613,7 +614,7 @@
 					)
 				)
 				(pin bidirectional line
-					(at 12.7 -2.54 180)
+					(at 10.16 -2.54 180)
 					(length 2.54)
 					(name "CANL"
 						(effects
@@ -631,7 +632,7 @@
 					)
 				)
 				(pin bidirectional line
-					(at 12.7 2.54 180)
+					(at 10.16 0 180)
 					(length 2.54)
 					(name "CANH"
 						(effects
@@ -648,11 +649,10 @@
 						)
 					)
 				)
-				(pin no_connect line
+				(pin input line
 					(at -10.16 -5.08 0)
 					(length 2.54)
-					(hide yes)
-					(name "NC"
+					(name "Rs"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2233,8 +2233,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Interface_CAN_LIN:TCAN332")
-		(at 83.82 83.82 0)
+		(lib_id "Interface_CAN_LIN:SN65HVD230")
+		(at 81.28 81.28 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2245,7 +2245,7 @@
 		(fields_autoplaced yes)
 		(uuid "6ad677f2-a120-466d-bc2d-1b3d3a1ee422")
 		(property "Reference" "U1"
-			(at 85.9633 71.12 0)
+			(at 83.4233 71.12 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2255,8 +2255,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TCAN332"
-			(at 85.9633 73.66 0)
+		(property "Value" "SN65HVD230"
+			(at 83.4233 73.66 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2267,19 +2267,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
-			(at 83.82 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tcan337.pdf"
-			(at 83.82 83.82 0)
+			(at 81.28 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2289,8 +2277,8 @@
 				)
 			)
 		)
-		(property "Description" "High-Speed CAN Transceiver, 1Mbps, 3.3V supply, SOT-23-8/SOIC-8"
-			(at 83.82 83.82 0)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/sn65hvd230.pdf"
+			(at 78.74 71.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2300,29 +2288,51 @@
 				)
 			)
 		)
-		(pin "6"
-			(uuid "26659c15-fd78-4790-afa6-216629426153")
+		(property "Description" "CAN Bus Transceivers, 3.3V, 1Mbps, Low-Power capabilities, SOIC-8"
+			(at 81.28 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
 		)
-		(pin "3"
-			(uuid "34f53a12-ccb8-4d79-ad13-e96b846123ee")
-		)
-		(pin "4"
-			(uuid "44d04397-552b-4780-afd4-c5aed26db675")
-		)
-		(pin "2"
-			(uuid "add86c43-c8b7-4551-8992-050d5b39cf4f")
+		(property "LCSC Part" "C12084"
+			(at 81.28 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
 		)
 		(pin "5"
-			(uuid "7341e05c-956c-40e8-901c-fbb00a97d9ee")
-		)
-		(pin "1"
-			(uuid "fe94a47b-b148-47a6-87da-07ee082aeadb")
+			(uuid "1d992086-fa9c-4a2b-9756-f1f26662e389")
 		)
 		(pin "8"
-			(uuid "0d46894a-c2e3-4f5b-9214-6ba8a19aa1b0")
+			(uuid "01810d05-25ef-4a5f-a099-a275eb39942e")
+		)
+		(pin "3"
+			(uuid "96acbf58-2dce-433a-8780-51dbda80cd7c")
+		)
+		(pin "6"
+			(uuid "3cb7ce7e-2c2f-4d3d-b97a-4eb262798df3")
+		)
+		(pin "2"
+			(uuid "ed850915-16d4-4145-9310-5d54b719ae74")
+		)
+		(pin "4"
+			(uuid "48f205a1-6332-464b-8971-72f479356037")
 		)
 		(pin "7"
-			(uuid "996647bf-5170-4002-8193-015cdf4f1c63")
+			(uuid "5fd50bb8-aea3-42eb-b6c4-603536f5af8a")
+		)
+		(pin "1"
+			(uuid "9f11bb64-2759-4cd1-b153-2a1dfabcb2de")
 		)
 		(instances
 			(project "SimpleCANBreakout"
@@ -2335,7 +2345,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 83.82 96.52 0)
+		(at 81.28 96.52 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2346,7 +2356,7 @@
 		(fields_autoplaced yes)
 		(uuid "77b6a63b-e639-48e6-95df-cbb85c8e64d1")
 		(property "Reference" "#PWR06"
-			(at 83.82 102.87 0)
+			(at 81.28 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2357,7 +2367,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 83.82 101.6 0)
+			(at 81.28 101.6 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2367,7 +2377,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 83.82 96.52 0)
+			(at 81.28 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2378,7 +2388,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 83.82 96.52 0)
+			(at 81.28 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2389,7 +2399,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 83.82 96.52 0)
+			(at 81.28 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2557,6 +2567,17 @@
 				)
 			)
 		)
+		(property "LCSC Part" "C19702"
+			(at 38.1 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "c8235a8b-d87a-4ca1-a398-aea7b3fc4bc2")
 		)
@@ -2707,6 +2728,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 200.66 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C22787"
 			(at 200.66 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -2956,6 +2988,17 @@
 				)
 			)
 		)
+		(property "LCSC Part" "C19702"
+			(at 36.83 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "0570f483-ad6a-4313-a5c2-c5cd402b1726")
 		)
@@ -3117,6 +3160,17 @@
 				)
 			)
 		)
+		(property "LCSC Part" "C14663"
+			(at 46.99 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "130e3daf-3dbf-45e8-8635-abefc6db5ddf")
 		)
@@ -3187,6 +3241,17 @@
 			)
 		)
 		(property "Description" "1A Low Dropout regulator, positive, 3.3V fixed output, SOT-223"
+			(at 62.23 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C6186"
 			(at 62.23 33.02 0)
 			(hide yes)
 			(show_name no)
@@ -3272,6 +3337,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 48.26 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C14663"
 			(at 48.26 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -3601,6 +3677,17 @@
 				)
 			)
 		)
+		(property "LCSC Part" "C19702"
+			(at 86.36 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "7e85b2ea-1b65-40ff-af18-b204ba6e1f0f")
 		)
@@ -3752,6 +3839,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 73.66 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C14663"
 			(at 73.66 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -3936,7 +4034,7 @@
 	)
 	(wire
 		(pts
-			(xy 38.1 69.85) (xy 83.82 69.85)
+			(xy 38.1 69.85) (xy 81.28 69.85)
 		)
 		(stroke
 			(width 0)
@@ -3946,7 +4044,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 69.85) (xy 83.82 73.66)
+			(xy 81.28 69.85) (xy 81.28 73.66)
 		)
 		(stroke
 			(width 0)
@@ -4006,7 +4104,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 93.98) (xy 83.82 96.52)
+			(xy 81.28 91.44) (xy 81.28 96.52)
 		)
 		(stroke
 			(width 0)
@@ -4036,7 +4134,7 @@
 	)
 	(wire
 		(pts
-			(xy 96.52 81.28) (xy 101.6 81.28)
+			(xy 91.44 81.28) (xy 101.6 81.28)
 		)
 		(stroke
 			(width 0)
@@ -4046,7 +4144,7 @@
 	)
 	(wire
 		(pts
-			(xy 96.52 86.36) (xy 101.6 86.36)
+			(xy 91.44 83.82) (xy 101.6 83.82)
 		)
 		(stroke
 			(width 0)
@@ -4243,7 +4341,7 @@
 		(uuid "8c0fdd4c-5ac4-42fb-acb6-e8ae62bd0e17")
 	)
 	(label "CANL"
-		(at 101.6 86.36 0)
+		(at 101.6 83.82 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4419,6 +4517,46 @@
 			)
 		)
 		(uuid "745cb24f-43fc-4b9f-bd32-5e83381ff897")
+	)
+	(wire
+		(pts
+			(xy 71.12 86.36) (xy 68.58 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8e1c1937-1a12-468c-bc0f-105a1c8e557c")
+	)
+	(wire
+		(pts
+			(xy 68.58 86.36) (xy 68.58 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "90f824e8-8384-48d4-89c3-fde70b41bb76")
+	)
+	(wire
+		(pts
+			(xy 68.58 93.98) (xy 81.28 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "82bba871-1bba-4146-b84e-f403a16762a7")
+	)
+	(junction
+		(at 81.28 93.98)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "724a0c63-50a2-44f3-a8c5-f7748dbb061c")
+	)
+	(no_connect
+		(at 71.12 83.82)
+		(uuid "21f70f09-dff8-4ab5-86eb-2cf79da86aa9")
 	)
 	(sheet_instances
 		(path "/"

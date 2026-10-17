@@ -4,14 +4,15 @@ A small (31.5 × 15.5 mm) CAN transceiver breakout. It converts a microcontrolle
 
 <img src="Render-Front.png" alt="Board render, top side" width="400"> <img src="Render-Back.png" alt="Board render, bottom side" width="400">
 
-Designed in KiCad 10. See [SimpleCANBreakoutMicro](https://github.com/jlpoltrack/SimpleCANBreakoutMicro) for a smaller version with a JST-GH connector and switchable termination.
+Designed in KiCad 10. See [SimpleCANBreakoutMicro](https://github.com/jlpoltrack/SimpleCANBreakoutMicro) for a smaller version with a JST-GH connector, an XC6206 regulator, and switchable termination.
 
 ## Features
 
-- TCAN332 3.3 V CAN transceiver (up to 1 Mbps)
+- SN65HVD230 3.3 V CAN transceiver, wired for high-speed mode (up to 1 Mbps)
 - AMS1117 3.3 V LDO, so the board runs from a single 5 V supply
 - 120 Ω termination resistor, always fitted
 - 2-layer, 1.6 mm PCB, parts on the top side only
+- All parts are JLCPCB basic parts, except U1 (preferred extended)
 
 ## Connections
 
@@ -43,13 +44,13 @@ R1 (120 Ω) is permanently connected across CANH/CANL, so the board is meant to 
 
 ## Bill of materials
 
-| Ref        | Value       | Package  |
-|------------|-------------|----------|
-| U1         | TCAN332     | SOIC-8   |
-| U2         | AMS1117-3.3 | SOT-223  |
-| C1, C4, C6 | 10 µF       | 0603     |
-| C2, C3, C5 | 100 nF      | 0603     |
-| R1         | 120 Ω       | 0603     |
+| Ref        | Value       | Package  | LCSC   |
+|------------|-------------|----------|--------|
+| U1         | SN65HVD230  | SOIC-8   | C12084 |
+| U2         | AMS1117-3.3 | SOT-223  | C6186  |
+| C1, C4, C6 | 10 µF       | 0603     | C19702 |
+| C2, C3, C5 | 100 nF      | 0603     | C14663 |
+| R1         | 120 Ω       | 0603     | C22787 |
 
 ## Files
 
