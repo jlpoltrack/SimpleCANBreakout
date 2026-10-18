@@ -4465,41 +4465,45 @@
 	)
 	(text "3V3"
 		(exclude_from_sim no)
-		(at 22.352 18.542 0)
+		(at 15.875 19.05 0)
 		(effects
 			(font
 				(size 6.35 6.35)
 			)
+			(justify left)
 		)
 		(uuid "0c74dc0c-08af-4ef3-990d-452dd65e6cb0")
 	)
 	(text "MCU Connection"
 		(exclude_from_sim no)
-		(at 152.908 18.542 0)
+		(at 116.205 19.05 0)
 		(effects
 			(font
 				(size 6.35 6.35)
 			)
+			(justify left)
 		)
 		(uuid "9b7b70af-202f-4ea7-bb14-564804106db7")
 	)
 	(text "CAN"
 		(exclude_from_sim no)
-		(at 22.098 64.262 0)
+		(at 15.875 64.77 0)
 		(effects
 			(font
 				(size 6.35 6.35)
 			)
+			(justify left)
 		)
 		(uuid "ead75769-12c6-4fe6-a6df-9f10332da554")
 	)
 	(text "CAN Connection"
 		(exclude_from_sim no)
-		(at 154.178 64.262 0)
+		(at 116.205 64.77 0)
 		(effects
 			(font
 				(size 6.35 6.35)
 			)
+			(justify left)
 		)
 		(uuid "93757d69-e54e-4e31-a7c3-70ed1a3fb6e4")
 	)
